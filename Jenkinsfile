@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/staging',
-                                        execCommand: 'pwd && cat /etc/hosts'
+                                        execCommand: 'cat /etc/hosts > staging.txt'
                                     )
                                 ]
                             )
@@ -60,8 +60,8 @@ pipeline {
                                     sshTransfer(
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
-                                        remoteDirectory: '/tmp',
-                                        execCommand: 'pwd && cat /etc/hosts'
+                                        remoteDirectory: '/production',
+                                        execCommand: 'cat /etc/hosts > production.txt'
                                     )
                                 ]
                             )
