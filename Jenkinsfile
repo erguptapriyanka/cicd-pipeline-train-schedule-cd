@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/staging',
-                                        execCommand: 'cat /etc/hosts > staging.txt'
+                                        execCommand: 'cat /etc/hosts > /staging/staging.txt'
                                     )
                                 ]
                             )
@@ -61,7 +61,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/production',
-                                        execCommand: 'cat /etc/hosts > production.txt'
+                                        execCommand: 'cat /etc/hosts > /production/production.txt'
                                     )
                                 ]
                             )
